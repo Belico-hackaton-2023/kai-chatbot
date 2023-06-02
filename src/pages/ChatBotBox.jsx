@@ -11,12 +11,10 @@ import {
 import theme from '../styles/thememui'
 
 const Chatbot = styled(ChatBot)(({ theme }) => ({
-    backgroundColor: theme.palette.primary.light2,
     display:"flex",
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    animation: "marquee 30s infinite linear",
     position: "relative",
     ".rsc-container":{
         background: theme.palette.background.paper,
@@ -191,7 +189,46 @@ const Chatbot = styled(ChatBot)(({ theme }) => ({
         ".rsc-submit-button:disabled":{
             opacity: 0.3,
         }
-    }
+    },
+    "@media screen and (max-width: 600px)": {
+        padding: "10px",
+        alignItems: "center",
+        width:"100%",
+        ".rsc-ts-bubble":{
+            fontSize: theme.typography.caption.fontSize + "!important",
+            fontWeight: theme.typography.caption.fontWeight + "!important",
+            lineHeight: theme.typography.caption.lineHeight + "!important",
+        },
+        ".rsc-container":{
+            padding: "32px 20px!important",
+            ".rsc-ts.rsc-ts-bot:not(:first-of-type), .rsc-ts.rsc-ts-user:not(:first-of-type)":{
+                columnGap: "8px!important"
+            },
+        },
+        ".rsc-ts-image-container":{
+            ".rsc-ts-image": {
+                height: "35px!important",
+                width: "35px!important",
+            },
+        },
+        ".rsc-ts-bot:first-of-type":{
+            ".rsc-ts-image-container":{
+                ".rsc-ts-image": {
+                    height: "60px!important",
+                    width: "60px!important",
+                },
+            },
+            ".rsc-ts-bubble": {
+                fontSize: theme.typography.h6.fontSize + "!important",
+                fontWeight: theme.typography.h6.fontWeight + "!important",
+                lineHeight: theme.typography.h6.lineHeight + "!important",
+                padding: "4px 6px!important",
+                width: "fit-content",
+                minWidth: "fit-content!important",
+            }
+            
+        },
+    },
   }));
 
   const ButtonKai = styled(Box)(({ theme }) => ({
@@ -221,6 +258,11 @@ const Chatbot = styled(ChatBot)(({ theme }) => ({
             height: "35px",
             right: "-30px",
         }
+    },
+    "@media screen and (max-width: 600px)": {
+        button: {
+            left: "30px",
+        },
     },
   }));
 
