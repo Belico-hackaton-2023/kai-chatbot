@@ -276,8 +276,10 @@ const steps = [
     id: '2',
     options: [
       { value: 1, label: 'Glosario', trigger: '3' },
-      // { value: 2, label: 'Beneficios', trigger: '4' },
-      // { value: 3, label: 'Areas', trigger: '5' },
+      { value: 2, label: 'Beneficios', trigger: '3' },
+      { value: 4, label: 'Recurso Humanos', trigger: '3' },
+      { value: 5, label: 'Producto', trigger: '3' },
+      { value: 6, label: 'Cultura', trigger: '3' },
     ],
   },
   {
