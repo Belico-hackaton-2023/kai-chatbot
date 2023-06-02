@@ -8,6 +8,7 @@ const secondary_light = "#B7FFEE";
 const tertiary_dark = "#0081B6";
 const tertiary_main = "#17A5DF";
 const tertiary_light = "#ACE7FF";
+const horn_bubble = "data:image/svg+xml,%3Csvg width='44' height='39' viewBox='0 0 44 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-1.14441e-05 38.1666C-1.14441e-05 38.1666 11.3588 30.403 11.3588 0.870178L43.6177 24.0824C43.6177 24.0824 30.8959 39.9271 -1.14441e-05 38.1666Z' fill='white'/%3E%3C/svg%3E%0A";
 
 const Palette = {
   primary: {
@@ -167,7 +168,7 @@ const ThemeFonts = {
     subtitle1: 18,
     subtitle2: 15,
     body1: 17,
-    body2: 16,
+    body2: 15,
     caption: 14,
     overline: 13,
     numericText: 15,
@@ -747,27 +748,27 @@ const theme = createTheme({
         textPrimary: {
           backgroundColor: Palette.neutral[50],
           border: "1px solid transparent",
-          color: Palette.primary.light2,
+          color: Palette.tertiary.dark,
           boxShadow:
             "0px 10px 80px rgba(106, 167, 197, 0.1), 0px 5.0625px 34.875px rgba(106, 167, 197, 0.05), 0px 2px 13px rgba(106, 167, 197, 0.03), 0px 0.4375px 4.625px rgba(106, 167, 197, 0.02)",
           "&:hover": {
             backgroundColor: Palette.neutral[50],
-            border: "1px solid " + Palette.neutral[40] + "!important",
-            color: Palette.primary.light2,
+            border: "1px solid #E2E8F0!important",
+            color: Palette.tertiary.dark,
             boxShadow:
               "0px 10px 80px rgba(106, 167, 197, 0.1), 0px 5.0625px 34.875px rgba(106, 167, 197, 0.05), 0px 2px 13px rgba(106, 167, 197, 0.03), 0px 0.4375px 4.625px rgba(106, 167, 197, 0.02)"
           },
           "&:focus, &:active": {
             backgroundColor: Palette.neutral[50],
-            border: "1px solid " + Palette.neutral[40] + "!important",
-            color: Palette.primary.light,
+            border: "1px solid #E2E8F0!important",
+            color: Palette.tertiary.main,
             boxShadow:
               "0px 10px 80px rgba(106, 167, 197, 0.1), 0px 5.0625px 34.875px rgba(106, 167, 197, 0.05), 0px 2px 13px rgba(106, 167, 197, 0.03), 0px 0.4375px 4.625px rgba(106, 167, 197, 0.02)"
           },
           "&:disabled": {
             backgroundColor: Palette.neutral[50],
             border: "1px solid " + Palette.neutral[50],
-            color: Palette.primary.light2,
+            color: Palette.tertiary.dark,
             opacity: "50%"
           }
         },
