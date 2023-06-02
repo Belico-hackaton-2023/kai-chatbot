@@ -4,6 +4,7 @@ import ChatBot from 'react-simple-chatbot';
 import SearchGlosary from '../components/SearchGlosary/SearchGlosary';
 import { UserContext } from '../context/UserContext'
 import { useNavigate } from 'react-router-dom'
+import headKaiImg from '../content/images/kai-head.svg'
 
 
 // all available props
@@ -64,7 +65,7 @@ const App = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <ChatBot steps={steps} />
+        <ChatBot steps={steps} botAvatar={headKaiImg} />
       </ThemeProvider>
     </>
   )
