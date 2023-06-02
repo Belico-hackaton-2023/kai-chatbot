@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect, useContext } from 'react'
 import { ThemeProvider } from 'styled-components';
 import ChatBot from 'react-simple-chatbot';
 import SearchGlosary from '../components/SearchGlosary/SearchGlosary';
+import { UserContext } from '../context/UserContext'
+import { useNavigate } from 'react-router-dom'
+
 
 // all available props
 const theme = {
@@ -15,6 +18,7 @@ const theme = {
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
 };
+
 
 const steps = [
   {
@@ -47,8 +51,16 @@ const steps = [
   },
 ];
 
-const App = () => {
 
+const App = () => {
+  const navigate = useNavigate()
+  const { userData } = useContext(UserContext)
+  const validateSignin = () => {
+    userData === null && navigate('/')
+  }
+  useEffect(() => {
+    validateSignin()
+  }, [userData]);
   return (
     <>
       <ThemeProvider theme={theme}>

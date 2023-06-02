@@ -4,18 +4,24 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import UserProvider from './context/UserContext'
 
 import * as styles from '@mui/material/styles'
 import App from './pages/App.jsx'
 import theme from './styles/theme'
 
 import './index.css'
+import Login from './pages/Login.jsx';
 
 
 const router = createBrowserRouter([
   {
+    path: '/login',
+    element: <UserProvider><Login /></UserProvider>
+  },
+  {
     path: "/",
-    element: <App />,
+    element: <UserProvider><App /></UserProvider>,
   },
 ]);
 
