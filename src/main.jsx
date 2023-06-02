@@ -16,13 +16,17 @@ import Login from './pages/Login.jsx';
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <UserProvider><App /></UserProvider>,
+  },
+  {
     path: '/login',
     element: <UserProvider><Login /></UserProvider>
   },
   {
-    path: "/",
-    element: <UserProvider><App /></UserProvider>,
-  },
+    path: '/test',
+    element: <div><h1>Holi</h1></div>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
