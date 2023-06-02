@@ -1,23 +1,16 @@
 import { createChatBotMessage } from 'react-chatbot-kit'
-// import DogPicture from './DogPicture';
+// import LearningOptions from './components/LearningOptons/LearningOptions';
+import DogPicture from './components/DogPicture';
 
 const config = {
   botName: "KAI",
   initialMessages: [createChatBotMessage(`Holi crayoli`)],
-  // widgets: [
-  //   {
-  //     widgetName: 'dogPicture',
-  //     widgetFunc: () => (<DogPicture />)
-  //   },
-  // ],
-  customStyles: {
-    botMessageBox: {
-      backgroundColor: "#377e7c",
+  widgets: [
+    {
+      widgetName: 'dogPicture',
+      widgetFunc: (props) => <DogPicture {...props} />,
     },
-    chatButton: {
-      backgroundColor: "#377e7c",
-    },
-  },
+  ]
 };
 
 export default config;
