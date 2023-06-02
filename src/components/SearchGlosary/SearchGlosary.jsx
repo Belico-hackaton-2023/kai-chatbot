@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { glossary } from '../../data/glossary'
 
 const SearchGlosary = ({ steps }) => {
@@ -21,8 +22,10 @@ const SearchGlosary = ({ steps }) => {
     <div>
       <p>Esto es lo que se sobre: {word.value} </p>
       <p>{definition}</p>
-      <span>si quieres mas informacion puedes buscar aqui</span>
-      links
+      <span>
+        si quieres mas informacion puedes buscar aqui
+        <Link to={`https://docs.kushki.com/mx/glossary/payment-glossary`}>Documentacion</Link>
+      </span>
     </div>
   )
 }

@@ -228,20 +228,22 @@ const ButtonKai = styled(Box)(({ theme }) => ({
 const steps = [
   {
     id: '1',
-    message: 'Cuentame que quieres saber hoy?',
+    message: 'Para que soy bueno?',
     trigger: '2',
   },
   {
     id: '2',
     options: [
       { value: 1, label: 'Glosario', trigger: '3' },
-      // { value: 2, label: 'Beneficios', trigger: '4' },
-      // { value: 3, label: 'Areas', trigger: '5' },
+      { value: 2, label: 'Beneficios', trigger: '3' },
+      { value: 4, label: 'Recurso Humanos', trigger: '3' },
+      { value: 5, label: 'Producto', trigger: '3' },
+      { value: 6, label: 'Cultura', trigger: '3' },
     ],
   },
   {
     id: '3',
-    message: 'Escribe alguna palabra que no sepas de kushki',
+    message: 'Escribe alguna palabra que no sepas de kushki o billpocket',
     trigger: 'word',
   },
   {
