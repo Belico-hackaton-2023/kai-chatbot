@@ -1,9 +1,9 @@
 import React, { useEffect, useContext } from 'react'
 import { ThemeProvider } from 'styled-components';
-import ChatBot from 'react-simple-chatbot';
-import SearchGlosary from '../components/SearchGlosary/SearchGlosary';
 import { UserContext } from '../context/UserContext'
 import { useNavigate } from 'react-router-dom'
+import ChatBotBox from '../pages/ChatBotBox'
+import theme from '../styles/thememui'
 import headKaiImg from '../content/images/kai-head.svg'
 
 
@@ -51,7 +51,6 @@ const steps = [
     asMessage: true,
   },
 ];
-
 
 const App = () => {
   const navigate = useNavigate()
